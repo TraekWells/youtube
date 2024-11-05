@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 1543 - To do list</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <!-- https://www.uidesigndaily.com/posts/figma-to-do-list-day-1543 -->
+  <body>
+    <div class="card flow">
+      <header class="card__title">
+        <h1>Groceries</h1>
+        <p class="hint-text">Shared with <a href="#">1 person</a></p>
+        <button class="more">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-more-horizontal"
+          >
+            <circle cx="12" cy="12" r="1" />
+            <circle cx="19" cy="12" r="1" />
+            <circle cx="5" cy="12" r="1" />
+          </svg>
+        </button>
+      </header>
+      <div class="card__tasks">
+        <ul data-id="uncompleted-task-list">
+          <li>
+            <label> <input type="checkbox" /> Eggs </label>
+          </li>
+          <li>
+            <label> <input type="checkbox" /> Avocado </label>
+          </li>
+          <li>
+            <label> <input type="checkbox" /> Tomatoes </label>
+          </li>
+        </ul>
+      </div>
+      <div class="card__completed-tasks">
+        <small>Completed <span class="num-completed">(4)</span></small>
+        <ul data-id="completed-tasks">
+          <li>
+            <label> <input type="checkbox" checked /> Egg noodles </label>
+          </li>
+          <li>
+            <label> <input type="checkbox" checked /> Scampi </label>
+          </li>
+          <li>
+            <label> <input type="checkbox" checked /> Orange juice </label>
+          </li>
+          <li>
+            <label> <input type="checkbox" checked /> Apples </label>
+          </li>
+        </ul>
+      </div>
+      <button class="card__cta">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-plus"
+        >
+          <path d="M5 12h14" />
+          <path d="M12 5v14" />
+        </svg>
+      </button>
+    </div>
+  </body>
+</html>
