@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Let's Build This Thing: Dribbble Navigation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="#" class="logo">ZEUS UI</a>
+      <ul class="navbar__items">
+        <li class="navbar__item">
+          <a href="#" class="navbar__link"> About us </a>
+        </li>
+        <li class="navbar__item">
+          <button class="navbar__link" aria-expanded="false" data-nav-trigger>
+            Solutions
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="trigger-icon lucide lucide-chevron-down-icon lucide-chevron-down"
+            >
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </button>
+          <nav class="navbar__sub-menu">
+            <div class="navbar__sub-menu-column">
+              <h4>Product</h4>
+              <ul class="navbar__sub-menu-items">
+                <li><a href="#">Use cases</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">User Stories</a></li>
+              </ul>
+            </div>
+            <div class="navbar__sub-menu-column">
+              <h4>About</h4>
+              <ul class="navbar__sub-menu-items">
+                <li><a href="#">Company</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Awards</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contacts</a></li>
+              </ul>
+            </div>
+            <div class="navbar__sub-menu-column">
+              <h4>Resources</h4>
+              <ul class="navbar__sub-menu-items">
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Cases</a></li>
+                <li><a href="#">Articles</a></li>
+                <li><a href="#">University</a></li>
+              </ul>
+            </div>
+            <div class="featured-article">
+              <h4>Latest Arrival</h4>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a href="#" class="cta"
+                >Read article
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-chevrons-right-icon lucide-chevrons-right"
+                >
+                  <path d="m6 17 5-5-5-5" />
+                  <path d="m13 17 5-5-5-5" />
+                </svg>
+              </a>
+            </div>
+          </nav>
+        </li>
+        <li class="navbar__item">
+          <button class="navbar__link" aria-expanded="false" data-nav-trigger>
+            Resources
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="trigger-icon lucide lucide-chevron-down-icon lucide-chevron-down"
+            >
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </button>
+          <nav class="navbar__sub-menu">
+            <div class="navbar__sub-menu-column">
+              <h4>Learning</h4>
+              <ul class="navbar__sub-menu-items">
+                <li><a href="#">Documentation</a></li>
+                <li><a href="#">Tutorials</a></li>
+                <li><a href="#">Video Guides</a></li>
+                <li><a href="#">API Reference</a></li>
+              </ul>
+            </div>
+            <div class="navbar__sub-menu-column">
+              <h4>Community</h4>
+              <ul class="navbar__sub-menu-items">
+                <li><a href="#">Forum</a></li>
+                <li><a href="#">Discord</a></li>
+                <li><a href="#">Newsletter</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Partners</a></li>
+              </ul>
+            </div>
+            <div class="navbar__sub-menu-column">
+              <h4>Support</h4>
+              <ul class="navbar__sub-menu-items">
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">System Status</a></li>
+              </ul>
+            </div>
+            <div class="featured-article">
+              <h4>New guide available</h4>
+              <p>
+                Discover our latest comprehensive guide to getting started with
+                advanced features and best practices.
+              </p>
+              <a href="#" class="cta"
+                >Read article
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-chevrons-right-icon lucide-chevrons-right"
+                >
+                  <path d="m6 17 5-5-5-5" />
+                  <path d="m13 17 5-5-5-5" />
+                </svg>
+              </a>
+            </div>
+          </nav>
+        </li>
+        <li class="navbar__item">
+          <a href="#" class="navbar__link">Pricing</a>
+        </li>
+        <li class="navbar__item">
+          <a href="#" class="navbar__link">Contacts</a>
+        </li>
+      </ul>
+      <a href="#" class="cta"
+        >Try for free
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-chevrons-right-icon lucide-chevrons-right"
+        >
+          <path d="m6 17 5-5-5-5" />
+          <path d="m13 17 5-5-5-5" />
+        </svg>
+      </a>
+    </nav>
+    <script src="main.js"></script>
+  </body>
+</html>

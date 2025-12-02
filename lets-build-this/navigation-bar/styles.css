@@ -1,0 +1,213 @@
+@layer base, components;
+
+:root {
+  --font-family: "Hanken Grotesk", sans-serif;
+
+  --color-logo: 190deg 67% 18%;
+  --color-background: 207deg 39% 95%;
+  --color-primary-dark: 258deg 59% 59%;
+  --color-primary-light: 281deg 93% 98%;
+  --color-base-dark: 243deg 7% 12%;
+  --color-base-ink: 231deg 4% 37%;
+  --color-base-white: 243deg 7% 100%;
+
+  --font-weight-boldest: 700;
+  --font-weight-bolder: 600;
+  --font-weight-bold: 500;
+
+  --font-size-base: 1rem;
+  --font-size-md: calc(20 / 16 * 1rem);
+  --font-size-lg: calc(24 / 16 * 1rem);
+
+  --border-radius: 1.5rem;
+
+  --box-shadow: 0 4px 10px 0 hsl(var(--color-base-dark) / 0.05);
+
+  --space-sm: calc(10 / 16 * 1rem);
+  --space-md: 1rem;
+  --space-lg: calc(20 / 16 * 1rem);
+}
+
+@layer base {
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+  }
+
+  body {
+    height: 100vh;
+    background-color: hsl(var(--color-background));
+    font-family: var(--font-family);
+    font-style: normal;
+    font-optical-sizing: auto;
+    color: hsl(var(--color-base-ink));
+    font-size: var(--font-size-base);
+  }
+
+  button {
+    padding: 0;
+    font-family: inherit;
+  }
+
+  a,
+  button {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    font-size: inherit;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  h4 {
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-bolder);
+    color: hsl(var(--color-base-dark));
+    margin: 0;
+  }
+}
+
+@layer components {
+  .navbar {
+    width: 1200px;
+    max-width: 90%;
+    margin-inline: auto;
+    display: flex;
+    padding-inline: var(--space-lg);
+    background-color: hsl(var(--color-base-white));
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-lg);
+    box-shadow: var(--box-shadow);
+    position: relative;
+    margin-block-start: 300px;
+  }
+
+  .navbar__items {
+    padding: var(--space-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .trigger-icon {
+    transition: transform 200ms ease;
+  }
+
+  .navbar__item {
+    flex-shrink: 0;
+  }
+
+  .navbar__link {
+    border: none;
+    background-color: unset;
+    font-weight: var(--font-weight-boldest);
+    color: inherit;
+    text-decoration: none;
+    font-size: var(--font-size-base);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+
+    &:hover,
+    &:focus-visible {
+      background-color: hsl(var(--color-primary-light));
+      color: hsl(var(--color-primary-dark));
+      border-radius: 2rem;
+    }
+  }
+
+  [data-nav-trigger] {
+    &[aria-expanded="true"] {
+      .trigger-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .navbar__sub-menu {
+    display: none;
+
+    &.active {
+      display: flex;
+      position: absolute;
+      justify-self: center;
+      background-color: hsl(var(--color-base-white));
+      width: fit-content;
+      top: 6rem;
+      padding: var(--space-sm);
+      border-radius: var(--border-radius);
+      left: 0;
+      right: 0;
+      max-width: calc(800 / 16 * 1rem);
+      box-shadow: var(--box-shadow);
+
+      a {
+        color: inherit;
+      }
+    }
+  }
+
+  .cta {
+    color: hsl(var(--color-base-white));
+    background-color: hsl(var(--color-primary-dark));
+    border-radius: 2rem;
+    padding: var(--space-sm) var(--space-md);
+    gap: var(--space-sm);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .logo {
+    font-size: var(--font-size-lg);
+    font-weight: 900;
+    color: hsl(var(--color-logo));
+  }
+
+  .navbar__sub-menu-column {
+    margin-block: var(--space-lg);
+    margin-inline: var(--space-lg);
+    flex-basis: 20%;
+  }
+
+  .navbar__sub-menu-items {
+    display: flex;
+    flex-direction: column;
+    margin-block-start: var(--space-md);
+    gap: var(--space-sm);
+
+    a {
+      font-weight: var(--font-weight-bold);
+    }
+  }
+
+  .featured-article {
+    background-color: hsl(var(--color-primary-dark));
+    color: hsl(var(--color-base-white));
+    padding: var(--space-lg);
+    border-radius: calc(var(--border-radius) - var(--space-sm));
+    flex-basis: 25%;
+
+    h4 {
+      color: hsl(var(--color-base-white));
+    }
+
+    .cta {
+      color: hsl(var(--color-base-white));
+      font-weight: var(--font-weight-bold);
+      border: 1px solid hsl(var(--color-base-white));
+
+      &:hover,
+      &:focus-visible {
+        background-color: hsl(var(--color-base-white));
+        color: hsl(var(--color-primary-dark));
+      }
+    }
+  }
+}
